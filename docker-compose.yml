@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  app:
+    image: nextjs-app
+    build: .
+    ports:
+      - 80:3000
+
+  nginx:
+    image: nginx:1.21-alpine
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    ports:
+      - 8080:80
