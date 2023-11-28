@@ -2,7 +2,7 @@ import Project_card from "../project_card/Project_card";
 import first from "../../videos/videolux.mp4";
 import second from "../../videos/clinica.mp4";
 import third   from "../../videos/pos.mp4";
-
+import { NavLink } from "react-router-dom";
 
 const Projects = () => {
   // date
@@ -41,9 +41,9 @@ const Projects = () => {
           </div>
           {/* right */}
           <div className=" text-white font-medium">
-            <a href="http://localhost:3000/projects">
+            <NavLink to="/projects">
               <span>View all ~~&gt;</span>
-            </a>
+            </NavLink>
           </div>
         </div>
         {/* bottom */}
